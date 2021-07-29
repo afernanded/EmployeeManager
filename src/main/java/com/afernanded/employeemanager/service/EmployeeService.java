@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.afernanded.employeemanager.exception.UserNotFoundException;
 import com.afernanded.employeemanager.model.Employee;
 import com.afernanded.employeemanager.repo.EmployeeRepo;
 
@@ -22,7 +23,7 @@ public class EmployeeService {
 		employee.setEmployeeCode(UUID.randomUUID().toString());
 		return employeeRepo.save(employee);
 	}
-	
+
 	public List<Employee> findAllEmployees() {
 		return employeeRepo.findAll();
 	}

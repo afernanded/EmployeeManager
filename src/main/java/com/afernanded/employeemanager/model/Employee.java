@@ -19,6 +19,9 @@ public class Employee implements Serializable {
 	@Column(nullable = false, updatable = false)
 	private String employeeCode;
 	
+	public Employee() {
+		
+	}
 	
 	public Employee(Long id, String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
 		this.name = name;
